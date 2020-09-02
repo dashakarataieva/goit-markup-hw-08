@@ -1,0 +1,25 @@
+.hero {
+  background: $block-background;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+    url("../images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-top: 0;
+  margin-bottom: 30px;
+}

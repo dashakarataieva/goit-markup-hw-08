@@ -1,0 +1,40 @@
+.description {
+  padding-top: 95px;
+  padding-bottom: 94px;
+
+  &-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+    background: $block-background;
+    height: 70px;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-70px);
+  }
+
+  &-list {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &-item {
+    width: calc((100% - 30px * 2) / 3);
+
+    .description-list & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &-img {
+    display: block;
+  }
+}
