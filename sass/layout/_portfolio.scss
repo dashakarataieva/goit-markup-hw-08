@@ -3,8 +3,8 @@
 }
 
 .port-btn-list {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 
   .port-link + .port-link {
     margin-left: 8px;
@@ -36,11 +36,11 @@
     color: $main-color;
   }
 
-  &-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
+  // &-list {
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: space-between;
+  // }
 
   &-description {
     padding-top: 20px;

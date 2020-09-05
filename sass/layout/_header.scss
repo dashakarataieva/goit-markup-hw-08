@@ -2,12 +2,13 @@
   border-bottom: 1px solid #ececec;
 }
 .nav {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   margin-right: auto;
 
   &-list {
-    display: flex;
+    display: none;
+    // display: flex;
   }
 
   &-link {
@@ -48,8 +49,9 @@
 }
 
 .head-conts {
-  display: flex;
-  align-items: baseline;
+  display: none;
+  // display: flex;
+  // align-items: baseline;
 }
 .current {
   color: $accent-color;

@@ -14,7 +14,7 @@
 }
 .main-title {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
@@ -22,4 +22,8 @@
   color: $white-color;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @include for-size (desktop) {
+    font-size: 44px;
+  }
 }

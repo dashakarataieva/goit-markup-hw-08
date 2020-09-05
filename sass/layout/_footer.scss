@@ -24,9 +24,51 @@
   }
 
   &-content {
-    display: flex;
-    justify-content: space-around;
+
+    @include for-size (desktop) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
+
+  &-item {
+    text-align: center;
+
+    @include for-size (desktop) {
+      text-align: left;
+    }
+  }
+
+  .network {
+    margin-top: 60px;
+        
+    @include for-size (tablet-landscape) {
+      margin-top: 0;
+    }
+
+  @include for-size (desktop) {
+    margin-top: 0;
+  }
+  }
+
+  .mailing {
+    margin-top: 60px;
+        
+    @include for-size (desktop) {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+  // &-tablet {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-direction: column;
+
+  //   @include for-size (tablet-landscape) {
+  //     display: flex;
+  //     flex-direction: row;
+  //   }
+  // }
 }
 
 .adress-map-link {
@@ -48,9 +90,11 @@
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  width: 358px;
+
+  width: 100%;
   height: 50px;
   padding-left: 15px;
+  max-width: 450px;
 
   color: $white-alt;
   border: 1px solid $white-alt2;
@@ -62,9 +106,11 @@
 
 .subscribe-cont {
   display: flex;
+  flex-direction: column;
 
-  .subscr-item + .subscr-item {
-    margin-left: 12px;
+  @include for-size (desktop) {
+    display: flex;
+    flex-direction: row;
   }
 }
 .subscr-icon {
