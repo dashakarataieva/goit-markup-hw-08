@@ -77,12 +77,11 @@
     }
   }
 
-  @include for-size (desktop) {
+  @include for-size(desktop) {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
   }
-}
 
   &-description {
     padding-top: 20px;
@@ -116,7 +115,6 @@
     }
 
     @include for-size(desktop) {
-      
       &:nth-child(-n + 8) {
         margin-bottom: 0;
       }
