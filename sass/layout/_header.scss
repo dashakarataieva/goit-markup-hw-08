@@ -2,12 +2,29 @@
   border-bottom: 1px solid #ececec;
 }
 .nav {
-  display: flex;
-  align-items: center;
   margin-right: auto;
 
-  &-list {
+  @include for-size (tablet-landscape) {
     display: flex;
+    margin-right: 80;
+  }
+
+  @include for-size (desktop) {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: auto;
+  }
+
+  &-list {
+    display: none;
+
+    @include for-size (tablet-landscape) {
+      display: flex;
+    }
+    
+    @include for-size (desktop) {
+      display: flex;
+    }
   }
 
   &-link {
@@ -48,8 +65,16 @@
 }
 
 .head-conts {
-  display: flex;
-  align-items: baseline;
+  display: none;
+
+  @include for-size (tablet-landscape) {
+    display: block;
+  }
+
+  @include for-size (desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 .current {
   color: $accent-color;
@@ -57,13 +82,15 @@
 
 .header-contacts-item {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1, 14;
+  font-size: 12px;
+  line-height: 1,14;
   letter-spacing: 0.02em;
   color: $main-color;
   text-decoration: none;
 
-  margin-left: 10px;
+  @include for-size (desktop) {
+    font-size: 14px;
+  }
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,7 +102,11 @@
   }
 }
 .nav-mail {
-  margin-right: 30px;
+  margin-right: 0;
+
+  @include for-size (desktop) {
+    margin-right: 30px;
+  }
 }
 .icon-header {
   vertical-align: middle;

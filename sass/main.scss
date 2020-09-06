@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/adaptive";
 @import "./utils/normalize";
 @import "./utils/fonts";
 @import "./base/general";
@@ -8,6 +9,7 @@
 @import "./components/modal";
 @import "./components/social-link";
 @import "./layout/header";
+@import "./layout/_mobile-menu";
 @import "./layout/hero";
 @import "./layout/preferences";
 @import "./layout/description";

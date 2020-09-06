@@ -1,6 +1,11 @@
 .description {
-  padding-top: 95px;
-  padding-bottom: 94px;
+  display: none;
+  padding: 95px 0;
+
+  @include for-size (desktop) {
+    display: block;
+  }
+
 
   &-text {
     font-weight: 700;
@@ -33,6 +38,7 @@
       margin-left: 30px;
     }
   }
+  
 
   &-img {
     display: block;

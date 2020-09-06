@@ -6,15 +6,47 @@
   padding-bottom: 200px;
 
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
-    url("../images/hero.jpg");
+    url("../images/hero/phone/Header-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  
+    background-image: url('../images/hero/phone/Header-img@2x.jpg');
+  }
+
+
+  @include for-size (tablet-landscape) {
+    background-image: url("../images/hero/tablet/Header-img.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    
+      background-image: url('../images/hero/tablet/Header-img@2x.jpg');
+    }
+  }
+
+  @include for-size (desktop) {
+    height: 600px;
+    background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+    url("../images/hero/desktop/hero.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    
+      background-image: url('../images/hero/desktop/Img@2x.jpg');
+    }
+  }
 }
 .main-title {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
@@ -22,4 +54,8 @@
   color: $white-color;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @include for-size (desktop) {
+    font-size: 44px;
+  }
 }
