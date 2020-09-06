@@ -622,6 +622,15 @@ img {
   border: 0px;
 }
 
+.header-mobile-menu-button,
+.header-mobile-menu-button-close {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 0;
+  outline: 0;
+}
+
 .field {
   display: block;
   width: 100%;
@@ -1157,6 +1166,46 @@ img {
   vertical-align: middle;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.header-mobile-menu:hover .header-mobile-menu-icon,
+.header-mobile-menu:focus .header-mobile-menu-icon,
+.header-mobile-menu:hover .header-mobile-menu-icon-close,
+.header-mobile-menu:focus .header-mobile-menu-icon-close {
+  fill: #2196f3;
+}
+
+@media (min-width: 768px) {
+  .header-mobile-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-mobile-menu {
+    display: none;
+  }
+}
+
+.header-mobile-menu-list {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  padding: 40px;
 }
 
 .hero {
