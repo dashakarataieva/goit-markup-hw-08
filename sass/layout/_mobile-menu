@@ -1,0 +1,7 @@
+.header-mobile-menu {
+
+    &-button {
+        width: 40px;
+        height: 40px;
+    }
+}

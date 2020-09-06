@@ -12,7 +12,15 @@
   }
 
   &-header {
-    margin-right: 85px;
+    margin-left: auto;
+
+    @include for-size (tablet-landscape) {
+      margin-right: 90px;
+    }
+
+    @include for-size (desktop) {
+      margin-right: 85px;
+    }
   }
 }
 .web {

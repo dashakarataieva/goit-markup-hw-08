@@ -24,9 +24,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 100%;
-  max-width: 528px;
-  height: 581px;
+  width: 450px;
+  height: auto;
+  padding: 40px;
+
+  @include for-size (desktop) {
+    width: 530px;
+  }
 
   background: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -49,7 +53,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $dark-color;
-    padding-top: 40px;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 12px;

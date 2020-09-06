@@ -1,11 +1,15 @@
 .field {
   display: block;
-  width: 448px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include for-size (desktop) {
+    width: 450px;;
+  }
 
   &:focus {
     border: 1px solid $accent-color;
@@ -57,13 +61,17 @@
 .agree {
   position: relative;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin: 0;
   margin-left: 25px;
 
   color: $main-color;
+
+  @include for-size (desktop) {
+    font-size: 14px;
+  }
 }
 .checkbox-input {
   -webkit-appearance: none;
@@ -73,15 +81,20 @@
 .custom-checkbox {
   position: absolute;
   display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
 
   background-color: $white-color;
   border: 2px solid $dark-color;
   border-radius: 2px;
-  left: 52px;
+  left: 40px;
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include for-size (desktop) {
+      left: 52px;
+    }
 
   .checkbox-input:checked + & {
     background-image: url(../images/icons/icon-check.svg);

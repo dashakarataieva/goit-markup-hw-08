@@ -2,6 +2,11 @@
   display: none;
   padding: 95px 0;
 
+  @include for-size (desktop) {
+    display: block;
+  }
+
+
   &-text {
     font-weight: 700;
     font-size: 14px;
@@ -22,17 +27,17 @@
   }
 
   &-list {
-    // display: flex;
+    display: flex;
     margin-top: 50px;
   }
 
-  // &-item {
-  //   width: calc((100% - 30px * 2) / 3);
+  &-item {
+    width: calc((100% - 30px * 2) / 3);
 
-  //   .description-list & + & {
-  //     margin-left: 30px;
-    
-  // }
+    .description-list & + & {
+      margin-left: 30px;
+    }
+  }
   
 
   &-img {

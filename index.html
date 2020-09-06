@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./sass/utils/_normalize.css" />
      <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header>
       <div class="container flexbox">
@@ -63,6 +64,13 @@
             </div>
           </div>
         </section>
+        <div class="header-mobile-menu">
+          <button class="header-mobile-menu-button" data-menu-button>
+            <svg class="header-mobile-menu-icon" width="24" height="16">
+              <use xlink:href="./images/sprite.svg#icon-menu-header"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -162,33 +170,45 @@
           <h2 class="block-title description-title">Чем мы занимаемся</h2>
           <ul class="list description-list">
             <li class="description-item">
-              <img
+              <picture>
+                <source srcset="./images/what-we-do/img1.jpg 1x, ./images/what-we-do/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img
                 src="./images/what-we-do/img1.jpg"
                 width="370"
                 height="294"
                 alt="Использование приложения на ПК"
                 class="description-img"
               />
+              </picture>
+              
               <p class="description-text">Десктопные приложения</p>
             </li>
             <li class="description-item">
-              <img
+              <picture>
+                <source srcset="./images/what-we-do/box-img2.jpg 1px, ./images/what-we-do/img2@2x.jpg 2px," media="(min-width 1200px)" />
+                <img
                 src="./images/what-we-do/box-img2.jpg"
                 width="370"
                 height="294"
                 alt="Использование приложения на смартфоне"
                 class="description-img"
               />
+                </picture>
+              
               <p class="description-text">Мобильные приложения</p>
             </li>
             <li class="description-item">
-              <img
+              <picture>
+                <source srcset="./images/what-we-do/img3.jpg 1px, ./images/what-we-do/img3@2x.jpg 2px," media="(min-width 1200px)" />
+                <img
                 src="./images/what-we-do/img3.jpg"
                 width="370"
                 height="294"
                 alt="Визуальное оформление"
                 class="description-img"
               />
+                </picture>
+              
               <p class="description-text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -201,13 +221,19 @@
           <h2 class="block-title crew-title">Наша команда</h2>
           <ul class="list crew-list">
             <li class="crew-item">
-              <img
-                src="./images/crew/img1.jpg"
+              <picture>
+                <source srcset="./images/crew/desktop/img1.jpg 1x, ./images/crew/desktop/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/crew/tablet/img1.jpg 1x, ./images/crew/tablet/img1@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/crew/phone/img1.jpg 1x, ./images/crew/phone/img1@2x.jpg 2x" media="(max-width: 767px)" />
+                <img
+                src="./images/crew/desktop/img1.jpg"
                 width="270"
                 height="260"
                 alt="Игорь Демьяненко"
                 class="crew-img"
               />
+              </picture>
+              
               <h3 class="crew-name">Игорь Демьяненко</h3>
               <p class="profession" lang="en">Product Designer</p>
               <ul class="list crew-socs">
@@ -274,13 +300,19 @@
               </ul>
             </li>
             <li class="crew-item">
-              <img
-                src="./images/crew/img2.jpg"
+              <picture>
+                <source srcset="./images/crew/desktop/img2.jpg 1px, ./images/crew/desktop/img2@2x.jpg 2px" media="(min-width 1200px)" />
+                <source srcset="./images/crew/tablet/img2.jpg 1px, ./images/crew/tablet/img2@2x.jpg 2px" media="(min-width 768px)" />
+                <source srcset="./images/crew/phone/img2.jpg 1px, ./images/crew/phone/img2@2x.jpg 2px" media="(max-width 767px)" />
+                <img
+                src="./images/crew/desktop/img2.jpg"
                 width="270"
                 height="260"
                 alt="Ольга Репина"
                 class="crew-img"
               />
+              </picture>
+              
               <h3 class="crew-name">Ольга Репина</h3>
               <p class="profession" lang="en">Frontend Developer</p>
               <ul class="list crew-socs">
@@ -347,13 +379,19 @@
               </ul>
             </li>
             <li class="crew-item">
-              <img
-                src="./images/crew/img3.jpg"
+              <picture>
+                <source srcset="./images/crew/desktop/img3.jpg 1px, ./images/crew/desktop/img3@2x.jpg 2px" media="(min-width 1200px)" />
+                <source srcset="./images/crew/tablet/img3.jpg 1px, ./images/crew/tablet/img3@2x.jpg 2px" media="(min-width 768px)" />
+                <source srcset="./images/crew/phone/img3.jpg 1px, ./images/crew/phone/img3@2x.jpg 2px" media="(max-width 767px)" />
+                <img
+                src="./images/crew/desktop/img3.jpg"
                 width="270"
                 height="260"
                 alt="Николай Тарасов"
                 class="crew-img"
               />
+              </picture>
+              
               <h3 class="crew-name">Николай Тарасов</h3>
               <p class="profession" lang="en">Marketing</p>
               <ul class="list crew-socs">
@@ -420,13 +458,19 @@
               </ul>
             </li>
             <li class="crew-item">
-              <img
-                src="./images/crew/img4.jpg"
+              <picture>
+                <source srcset="./images/crew/desktop/img4.jpg 1px, ./images/crew/desktop/img4@2x.jpg 2px" media="(min-width 1200px)" />
+                <source srcset="./images/crew/tablet/img4.jpg 1px, ./images/crew/tablet/img4@2x.jpg 2px" media="(min-width 768px)" />
+                <source srcset="./images/crew/phone/img4.jpg 1px, ./images/crew/phone/img4@2x.jpg 2px" media="(max-width 767px)" />
+                <img
+                src="./images/crew/desktop/img4.jpg"
                 width="270"
                 height="260"
                 alt="Михаил Ермаков"
                 class="crew-img"
               />
+              </picture>
+              
               <h3 class="crew-name">Михаил Ермаков</h3>
               <p class="profession" lang="en">UI Designer</p>
               <ul class="list crew-socs">
@@ -586,7 +630,6 @@
     <!-- footer -->
     <footer class="footer">
       <div class="footer-content container">
-        <div class="footer-tablet">
           <div class="footer-item">
             <a
               href="./index.html"
@@ -677,8 +720,7 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="mailing footer-item">
+        <div class="mailing footer-item ">
           <p class="footer-title">Подпишитесь на рассылку</p>
           <div class="subscribe-cont">
             <form action="#">
@@ -695,6 +737,7 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/phone-menu.js"></script>
     <script>
       (() => {
        document

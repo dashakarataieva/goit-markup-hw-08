@@ -3,13 +3,40 @@
 }
 
 .port-btn-list {
-  // display: flex;
-  // justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
 
-  .port-link + .port-link {
-    margin-left: 8px;
+  @include for-size (tablet-landscape) {
+    justify-content: center;
+  }
+
+  @include for-size (desktop) {
+    justify-content: center;
   }
 }
+
+.port-link {
+  text-decoration: none;
+  margin-right: 8px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(n+4) {
+    margin-bottom: 0;
+  }
+
+  @include for-size (tablet-landscape) {
+    margin-bottom: 0;
+  }
+
+  @include for-size (desktop) {
+    margin-bottom: 0;
+  }
+}
+
 .portfolio-examples {
   margin-top: 50px;
   padding-bottom: 94px;
@@ -36,18 +63,29 @@
     color: $main-color;
   }
 
-  // &-list {
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   justify-content: space-between;
-  // }
+  &-list {
+
+  @include for-size (tablet-landscape) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @include for-size (desktop) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
 
   &-description {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     justify-content: flex-start;
-    width: 370px;
+
+    width: 100%;
+    // width: 370px;
   }
 
   &-item {
@@ -55,10 +93,31 @@
     border: 1px solid $border-portfolio;
     box-sizing: border-box;
 
+    width: 100%;
+    max-width: 354px;
+
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:nth-child(-n + 6) {
+    @include for-size (tablet-landscape) {
+      width: calc((100% - 3) / 2);
+    }
+  
+    @include for-size (desktop) {
+      width: calc((100% - 3 * 2) / 3);
+    }
+
+    &:nth-child(-n + 8) {
       margin-bottom: 30px;
+    }
+
+    @include for-size (desktop) {
+      &:nth-child(-n + 8) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(-n + 6) {
+        margin-bottom: 30px;
+      }
     }
 
     &:hover,
@@ -82,8 +141,8 @@
     line-height: 28px;
     letter-spacing: 0.03em;
     color: $white-color;
-    height: 294px;
-    width: 370px;
+    height: auto;
+    width: 100%;
     margin: 0;
     padding: 63px 24px;
 
@@ -103,9 +162,8 @@
   &-img {
     display: block;
     margin: 0;
+    max-width: 354px;
+    height: auto;
   }
 }
 
-.port-link {
-  text-decoration: none;
-}

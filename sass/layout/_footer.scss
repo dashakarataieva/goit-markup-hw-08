@@ -2,6 +2,7 @@
   background: $footer-background;
   padding-top: 60px;
   padding-bottom: 60px;
+  
 
   &-contacts-link {
     font-style: normal;
@@ -25,6 +26,12 @@
 
   &-content {
 
+    @include for-size (tablet-landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
     @include for-size (desktop) {
       display: flex;
       justify-content: space-around;
@@ -33,6 +40,10 @@
 
   &-item {
     text-align: center;
+    
+    @include for-size (tablet-landscape) {
+      width: 354px;
+    }
 
     @include for-size (desktop) {
       text-align: left;
@@ -53,22 +64,16 @@
 
   .mailing {
     margin-top: 60px;
+
+    @include for-size (tablet-landscape) {
+      width: 450px;;
+    }
         
     @include for-size (desktop) {
       text-align: left;
       margin-top: 0;
     }
   }
-  // &-tablet {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-direction: column;
-
-  //   @include for-size (tablet-landscape) {
-  //     display: flex;
-  //     flex-direction: row;
-  //   }
-  // }
 }
 
 .adress-map-link {

@@ -17,6 +17,10 @@
     margin-top: 30px;
     text-align: center;
 
+    @include for-size (tablet-landscape) {
+      text-align: left;
+    }
+
     @include for-size (desktop) {
       text-align: left;
     }
@@ -30,16 +34,37 @@
     color: $main-color;
   }
 
-  // &-list {
-  //   // display: flex;
+  &-list {
 
-  //   .preferences-item + .preferences-item {
-  //     margin-left: 30px;
-  //   }
-  // }
+    @include for-size (tablet-landscape) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    @include for-size (desktop) {
+      display: flex;
+    }
+  }
 
   &-item {
-    // width: calc((100% - 30px * 3) / 4);
+    margin-top: 30px;
+
+    @include for-size (tablet-landscape) {
+      width: calc((100% - 30px) / 2);
+      
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+
+    @include for-size (desktop) {
+      width: calc((100% - 30px * 3) / 4);
+      margin-top: 0;
+
+      &:nth-child(-n+3) {
+        margin-right: 30px;
+      }
+    }
 
     &::before {
       display: block;
