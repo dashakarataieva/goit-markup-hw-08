@@ -622,6 +622,15 @@ img {
   border: 0px;
 }
 
+.header-mobile-menu-button,
+.header-mobile-menu-button-close {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 0;
+  outline: 0;
+}
+
 .field {
   display: block;
   width: 100%;
