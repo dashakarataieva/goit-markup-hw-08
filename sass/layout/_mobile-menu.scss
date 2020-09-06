@@ -1,32 +1,27 @@
 .header-mobile-menu {
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
 
-    &:hover &-icon,
-    &:focus &-icon, 
-    &:hover &-icon-close,
-    &:focus &-icon-close {
-        fill: $accent-color;
-    }
-
-    @include for-size (tablet-landscape) {
-        display: none;
-    }
-
-    @include for-size (desktop) {
-        display: none;
-    }
-
-    &-list {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 100%;
-        height: auto;
-        padding: 40px;
-    }
+  @include for-size(desktop) {
+    display: none;
+  }
 }
+// .header-mobile-menu-button,
+// .header-mobile-menu-button-close {
+//   width: 40px;
+//   height: 40px;
+//   background-color: $white-color;
+//   border: 0;
+//   outline: 0;
 
+//   &:hover .mobile-menu-icon,
+//   &:focus .mobile-menu-icon,
+//   &:hover .mobile-menu-icon-close,
+//   &:focus .mobile-menu-icon-close {
+//     fill: $accent-color;
+//   }
+// }
+// .header-mobile-menu-button:focus .mobile-menu-icon {
+//   fill: $accent-color;
+// }
