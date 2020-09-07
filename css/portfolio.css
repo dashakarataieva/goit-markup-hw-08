@@ -622,8 +622,7 @@ img {
   border: 0px;
 }
 
-.header-mobile-menu-button,
-.header-mobile-menu-button-close {
+.header-mobile-menu-button {
   width: 40px;
   height: 40px;
   background-color: #ffffff;
@@ -634,11 +633,7 @@ img {
 .header-mobile-menu-button:hover .mobile-menu-icon,
 .header-mobile-menu-button:focus .mobile-menu-icon,
 .header-mobile-menu-button:hover .mobile-menu-icon-close,
-.header-mobile-menu-button:focus .mobile-menu-icon-close,
-.header-mobile-menu-button-close:hover .mobile-menu-icon,
-.header-mobile-menu-button-close:focus .mobile-menu-icon,
-.header-mobile-menu-button-close:hover .mobile-menu-icon-close,
-.header-mobile-menu-button-close:focus .mobile-menu-icon-close {
+.header-mobile-menu-button:focus .mobile-menu-icon-close {
   fill: #2196f3;
 }
 
