@@ -125,3 +125,18 @@
     border: 0px;
   }
 }
+.header-mobile-menu-button,
+.header-mobile-menu-button-close {
+  width: 40px;
+  height: 40px;
+  background-color: $white-color;
+  border: 0;
+  outline: 0;
+
+  &:hover .mobile-menu-icon,
+  &:focus .mobile-menu-icon,
+  &:hover .mobile-menu-icon-close,
+  &:focus .mobile-menu-icon-close {
+    fill: $accent-color;
+  }
+}

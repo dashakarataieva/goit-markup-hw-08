@@ -2,16 +2,26 @@
   position: absolute;
   left: 0;
   top: 100%;
+  padding: 60px 0;
+  display: none;
 
   width: 100%;
-  height: 393px;
+  height: auto;
   background-color: $white-color;
-  // border-top: 1px solid #ececec;
+  border-top: 1px solid #ececec;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
 
-  // opacity: 0;
-  // z-index: 3;
+    transform: translateY(-100%);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-open {
+      display: block;
+    transform: translateY(0);
+    z-index: 3;
+    }
+}
+.burger{
 
   @include for-size(tablet-landscape) {
     display: none;
@@ -21,21 +31,87 @@
     display: none;
   }
 }
-.header-mobile-menu-button,
-.header-mobile-menu-button-close {
-  width: 40px;
-  height: 40px;
-  background-color: $white-color;
-  border: 0;
-  outline: 0;
-
-  &:hover .mobile-menu-icon,
-  &:focus .mobile-menu-icon,
-  &:hover .mobile-menu-icon-close,
-  &:focus .mobile-menu-icon-close {
-    fill: $accent-color;
+.header-mobile-menu-button:focus .is-open {
+  opacity: 1;
+}
+.header-mobile-menu-button {
+  &.is-open {
+    .mobile-menu-icon-close {
+      display: block;
+    }
+    .mobile-menu-icon {
+      display: none;
+    }
   }
 }
-// .header-mobile-menu-button:focus .is-open {
-//   opacity: 1;
+.mobile-menu-icon-close {
+  display: none;
+}
+.mobile-nav-list {
+  text-align: center;
+}
+.mobile-nav-item {
+  margin-bottom: 52px;
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+  & .current::after {
+    width: 60px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.mobile-nav-link {
+font-size: 18px;
+    line-height: 1.17;
+}
+
+.mobile-header-contacts {
+  text-align: center;
+
+  &-item {
+    font-size: 18px;
+      line-height: 1.17;
+  
+  }
+}
+.mobile-nav-mail {
+  margin-bottom: 16px;
+}
+.header-mobile-menu-button-close {
+  position: absolute;
+  right: 15px;
+  display: none;
+}
+// .is-open .header-mobile-menu-button-close {
+//   display: block;
 // }
+// .header-mobile-menu-button .mobile-menu-icon-close {
+//   display: none;
+// }
+// .header-mobile-menu-button.is-open .mobile-menu-icon-close {
+//   display: block;
+// }
+
+
+
+.header-mobile-menu.is-open:focus {
+  display: block;
+}
+// .header-mobile-menu-button-close {
+//   display: none;
+// }
+// .header-mobile-menu:focus .header-mobile-menu-button-close {
+//   display: block;
+//   z-index: 3;
+// }
+
+
+
+
+// .header-mobile-menu-button.is-open .mobile-menu-icon {
+// display: none;
+// }
+
