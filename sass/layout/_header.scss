@@ -4,6 +4,7 @@
   &-parent {
     position: relative;
     z-index: 5;
+    // overflow: hidden;
   }
 }
 .nav {
@@ -54,6 +55,10 @@
 
     &:not(:last-child) {
       margin-right: 50px;
+
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
     }
 
     .current::after {
