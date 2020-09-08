@@ -628,6 +628,7 @@ img {
   background-color: #ffffff;
   border: 0;
   outline: 0;
+  padding: 0;
 }
 
 .header-mobile-menu-button:hover .mobile-menu-icon,
@@ -925,18 +926,16 @@ img {
 
 .header-mobile-menu {
   position: absolute;
-  left: 0;
+  left: 1px;
   top: 100%;
   padding: 60px 0;
   display: none;
-  width: 100%;
+  width: calc(100% - 2px);
   height: auto;
   background-color: #ffffff;
   border-top: 1px solid #ececec;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -945,8 +944,6 @@ img {
 
 .header-mobile-menu.is-open {
   display: block;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   z-index: 3;
 }
 
@@ -962,10 +959,6 @@ img {
   }
 }
 
-.header-mobile-menu-button:focus .is-open {
-  opacity: 1;
-}
-
 .header-mobile-menu-button.is-open .mobile-menu-icon-close {
   display: block;
 }
@@ -976,6 +969,8 @@ img {
 
 .mobile-menu-icon-close {
   display: none;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .mobile-nav-list {
@@ -1014,12 +1009,6 @@ img {
 
 .mobile-nav-mail {
   margin-bottom: 16px;
-}
-
-.header-mobile-menu-button-close {
-  position: absolute;
-  right: 15px;
-  display: none;
 }
 
 .header-mobile-menu.is-open:focus {
@@ -1106,6 +1095,19 @@ img {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.portfolio-examples-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) {

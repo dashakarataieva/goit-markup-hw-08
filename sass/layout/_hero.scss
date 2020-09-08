@@ -2,45 +2,45 @@
   background: $block-background;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   max-width: 1600px;
-  height: 400px;
+  height: auto;
   background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
     url("../images/hero/phone/Header-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  
-    background-image: url('../images/hero/phone/Header-img@2x.jpg');
-  }
-
-
-  @include for-size (tablet-landscape) {
-    background-image: url("../images/hero/tablet/Header-img.jpg");
-
-    @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    
-      background-image: url('../images/hero/tablet/Header-img@2x.jpg');
+    background-image: url("../images/hero/phone/Header-img@2x.jpg");
+  }
+
+  @include for-size(tablet-landscape) {
+    background-image: url("../images/hero/tablet/Header-img.jpg");
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../images/hero/tablet/Header-img@2x.jpg");
     }
   }
 
-  @include for-size (desktop) {
+  @include for-size(desktop) {
     height: 600px;
     background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
-    url("../images/hero/desktop/hero.jpg");
+      url("../images/hero/desktop/hero.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    
-      background-image: url('../images/hero/desktop/Img@2x.jpg');
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../images/hero/desktop/Img@2x.jpg");
     }
   }
 }
@@ -55,7 +55,7 @@
   margin-top: 0;
   margin-bottom: 30px;
 
-  @include for-size (desktop) {
+  @include for-size(desktop) {
     font-size: 44px;
   }
 }
