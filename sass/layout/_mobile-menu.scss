@@ -1,11 +1,10 @@
 .header-mobile-menu {
   position: absolute;
-  left: 1px;
   top: 100%;
   padding: 60px 0;
   display: none;
 
-  width: calc(100% - 2px);
+  width: 100%;
   height: auto;
   background-color: $white-color;
   border-top: 1px solid #ececec;
