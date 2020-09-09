@@ -766,6 +766,16 @@ img {
   margin-left: 10px;
 }
 
+@media (min-width: 1200px) {
+  .web-list {
+    text-align: left;
+    margin-top: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -773,6 +783,10 @@ img {
 .header-parent {
   position: relative;
   z-index: 5;
+}
+
+.header-main container {
+  height: 90px;
 }
 
 .nav {
@@ -858,7 +872,7 @@ img {
   position: absolute;
   background-color: #2196f3;
   border-radius: 2px;
-  bottom: -28px;
+  bottom: -32px;
 }
 
 .head-conts {
@@ -927,6 +941,7 @@ img {
 .header-mobile-menu {
   position: absolute;
   top: 100%;
+  left: 0;
   padding: 60px 0;
   display: none;
   width: 100%;

@@ -60,4 +60,9 @@
   .web-item + .web-item {
     margin-left: 10px;
   }
+  @include for-size(desktop) {
+    text-align: left;
+    margin-top: 0;
+    justify-content: start;
+  }
 }

@@ -15,18 +15,21 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url("../images/hero/phone/Header-img@2x.jpg");
+    background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+      url("../images/hero/phone/Header-img@2x.jpg");
   }
 
   @include for-size(tablet-landscape) {
-    background-image: url("../images/hero/tablet/Header-img.jpg");
+    background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+      url("../images/hero/tablet/Header-img.jpg");
     padding-top: 118px;
     padding-bottom: 118px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url("../images/hero/tablet/Header-img@2x.jpg");
+      background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+        url("../images/hero/tablet/Header-img@2x.jpg");
     }
   }
 
@@ -40,7 +43,8 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url("../images/hero/desktop/Img@2x.jpg");
+      background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+        url("../images/hero/desktop/Img@2x.jpg");
     }
   }
 }
