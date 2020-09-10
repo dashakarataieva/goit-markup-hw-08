@@ -50,12 +50,6 @@
   &:last-child {
     margin-bottom: 60px;
   }
-  & .current::after {
-    width: 60px;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 .mobile-nav-link {
   font-size: 18px;
